@@ -1,17 +1,19 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import Logo1 from '@/assets/logo1.svg';
 
-export default function Footer(){
+export default function Footer() {
     const currentYear = new Date().getFullYear();
-    return(
-        <footer className="bg-gray-500 border-t border-gray-700 mt-auto">
-            <div className="max-w-6xl mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    return (
+        <footer className="bg-[#282828] border-t-2 border-[#383838] text-[#9d9d9d] mt-auto">
+            <div className="max-w-6xl mx-auto px-4 py-4">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                     <div>
-                        <h3 className="text-white font-bold text-lg mb-3">Site</h3>
+                        <Image src={Logo1} alt="EduCode" className='w-32'/>
+                        <p>&copy; {currentYear} EduCode. Все права защищены.</p>
                     </div>
-                    <div>
-                        <h4 className="text-white mb-3">Навигация</h4>
-                        <ul>
+                    <div className='flex gap-8'>
+                        {/* <ul>
                             <li>
                                 <Link href='/' className="hover:underline">Главная</Link>
                             </li>
@@ -24,9 +26,14 @@ export default function Footer(){
                             <li>
                                 <Link href='/services' className="hover:underline">Услуги / сервисы</Link>
                             </li>
-                        </ul>
-                    </div>
+                        </ul> */}
+                            <Link href='/' className="hover:underline hover:text-white">Помощь</Link>
+                            <Link href='/about' className="hover:underline hover:text-white">Юридическая информация</Link>
+                            <Link href='/contacts' className="hover:underline hover:text-white">Политика конфиденциальности</Link>
 
+
+                    </div>
+{/* 
                     <div>
                         <h4 className="text-white mb-3">Контакты</h4>
                         <ul>
@@ -34,10 +41,7 @@ export default function Footer(){
                             <li>Телефон: +7 (999) 123-45-67</li>
                             <li>Адрес: г.Якутск, ул. Кулаковского, 48</li>
                         </ul>
-                    </div>
-                    <div>
-                        <p>&copy; {currentYear} Site. Все права защищены.</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

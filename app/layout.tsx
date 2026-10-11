@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import "@/app/globals.css";
 
 export default function RootLayout({
@@ -11,7 +12,7 @@ export default function RootLayout({
     <html>
       <body className="flex flex-col min-h-screen">
         <Header />
-        <main>{children}</main>
+        <main className="p-4">{children}</main>
         <Footer />
       </body>
     </html>
