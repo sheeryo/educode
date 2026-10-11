@@ -86,7 +86,7 @@ export default function ServicesPage() {
           </Link>
         </div>
 
-        {/* Тариф 3: Карьера под ключ */}
+        {/*pro*/}
         <div className="flex flex-col justify-between bg-[#282828] p-8 rounded-2xl border border-[#383838]">
           <div>
             <h2 className="text-2xl font-bold mb-2">Pro</h2>
