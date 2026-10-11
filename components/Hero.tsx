@@ -7,7 +7,7 @@ export default function Hero() {
     <section className='bg-[#282828] text-white pt-24 pb-16 px-8 border-1 border-[#383838] rounded-2xl'>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className='w-full flex flex-col items-start'>
-          <h1 className="text-4xl font-extrabold">
+          <h1 className="text-2xl md:text-4xl font-extrabold">
             EduCode - платформа онлайн-курсов по языкам программирования
           </h1>
           <p className="mt-4 text-[#9d9d9d] md:text-lg">
@@ -17,7 +17,7 @@ export default function Hero() {
             <Link
               href="/services"
             >
-              <button className="bg-[#423726] hover:bg-[#ffa11633] text-[#ffa116] p-4 rounded-xl cursor-pointer">Выбрать курс</button>
+              <button className="bg-[#423726] hover:bg-[#ffa11633] text-[#ffa116] p-4 rounded-xl cursor-pointer border-1 border-[#ffa116]">Выбрать курс</button>
             </Link>
           </div>
         </div>

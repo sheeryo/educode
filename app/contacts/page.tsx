@@ -1,29 +1,72 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Контакты | EduCode',
+};
+
 export default function ContactsPage() {
   return (
-    <div className="max-w-xl mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-4">Связаться с нами</h2>
-      <p className="text-gray-600 mb-6">Заполните форму или напишите нам на почту.</p>
+    <div className="max-w-6xl mx-auto px-4 py-16 text-white">
       
-      <form className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium mb-1">Ваше имя</label>
-          <input type="text" className="w-full p-2 border rounded-md" placeholder="Иван" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Email</label>
-          <input type="email" className="w-full p-2 border rounded-md" placeholder="ivan@example.com" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Сообщение</label>
-          <textarea className="w-full p-2 border rounded-md" rows={4} placeholder="Ваш вопрос..."></textarea>
-        </div>
-        <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
-          Отправить
-        </button>
-      </form>
+      {/*заголовок */}
+      <div className="text-center max-w-6xl mx-auto mb-16">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+          Свяжитесь с нами
+        </h1>
+        <p className="text-[#9d9d9d] text-xl">
+          Остались вопросы по выбору курса, оплате или формату обучения? Напишите нам, и наша команда ответит вам в течение 15 минут.
+        </p>
+      </div>
 
-      
-    </div>
-    
+      <div className="bg-[#282828] p-8 rounded-2xl border border-[#383838]">
+          <h2 className="text-2xl font-bold mb-8">Задать вопрос</h2>
+          
+          <form>
+            <div className='mb-4'>
+              <label className="inline-block text-sm font-medium text-[#9d9d9d] mb-2">
+                Ваше имя
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="Иван Иванов"
+                className="w-full bg-[#212121] border-1 border-[#383838] rounded-xl px-4 py-3 text-white placeholder-[#9d9d9d]"
+              />
+            </div>
+
+            <div className='mb-4'>
+              <label className="inline-block text-sm font-medium text-[#9d9d9d] mb-2">
+                Ваша почта
+              </label>
+              <input
+                type="email"
+                required
+                placeholder="example@mail.ru"
+                className="w-full bg-[#212121] border-1 border-[#383838] rounded-xl px-4 py-3 text-white placeholder-[#9d9d9d]"
+              />
+            </div>
+
+            <div className='mb-4'>
+              <label className="inline-block text-sm font-medium text-[#9d9d9d] mb-2">
+                Сообщение
+              </label>
+              <input
+                type="email"
+                required
+                placeholder="Расскажите какой курс вас интересует или задайте вопрос..."
+                className="w-full bg-[#212121] border-1 border-[#383838] rounded-xl px-4 py-3 text-white placeholder-[#9d9d9d]"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-[#423726] transition-all hover:bg-[#ffa11633] border-1 border-[#ffa116] text-[#ffa116] py-4 rounded-xl cursor-pointer"
+            >
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+
+      </div>
   );
 }
